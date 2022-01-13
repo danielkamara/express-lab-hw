@@ -1,0 +1,16 @@
+{
+  "name": "lab-server",
+  "version": "1.0.0",
+  "description": "Week 1 Day 3- Lab/HW Practice the Basics of Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
