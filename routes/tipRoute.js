@@ -6,13 +6,14 @@ tipRoute.get("/", (req, res) => {
   res.status(200).json({ tip: "Hello Tip" });
 });
 
-tipRoute.get("/:mood/:name", (req, res) => {
+tipRoute.get("/:total/:tipPercentage", (req, res) => {
   let total = req.params.total;
   let tipPercentage = req.params.tipPercentage;
 
-  res.status(200).json();
+  let tip = Number(total) * Number(tipPercentage);
+  res.status(200).json({ message: `Your tip is ${tip}.` });
 });
 
-tipRoute.get("/:name", (req, res) => {});
+tipRoute.get("/:tip", (req, res) => {});
 
 module.exports = tipRoute;

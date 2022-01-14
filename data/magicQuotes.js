@@ -1,4 +1,4 @@
-const magic = [
+const magicQuotes = [
   "It is certain",
   "It is decidedly so",
   "Without a doubt",
@@ -20,3 +20,5 @@ const magic = [
   "Outlook not so good",
   "Very doubtful",
 ];
+
+module.exports = magicQuotes;

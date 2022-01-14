@@ -1,14 +1,16 @@
 const express = require("express");
-
+const magicQuotes = require("../data/magicQuotes");
 const magicRoute = express.Router();
 
 magicRoute.get("/", (req, res) => {
-  res.status(200).json({ magic: "Hello magic" });
+  res.status(200).json({ message: "It's Like Magic Baby!!!" });
 });
 
-magicRoute.get("/", (req, res) => {
-  let name = req.params.name;
-  res.status(200).json({});
+magicRoute.get("/:question", (req, res) => {
+  let quotes = magicQuotes[Math.floor(Math.random() * magicQuotes.length)];
+  res.status(200).json({
+    answer: quotes,
+  });
 });
 
 module.exports = magicRoute;
