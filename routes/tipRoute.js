@@ -10,7 +10,7 @@ tipRoute.get("/:total/:tipPercentage", (req, res) => {
   let total = req.params.total;
   let tipPercentage = req.params.tipPercentage;
 
-  let tip = Number(total) * Number(tipPercentage);
+  let tip = (Number(total) * Number(tipPercentage)) / 100;
   res.status(200).json({ message: `Your tip is ${tip}.` });
 });
 
