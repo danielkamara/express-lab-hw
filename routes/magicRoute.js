@@ -7,12 +7,7 @@ magicRoute.get("/", (req, res) => {
 });
 
 magicRoute.get("/:question", (req, res) => {
-  let question = req.params.question;
-  let idx = Math.floor(Math.random() * magicQuotes.length);
-
-  // let quotes = magicQuotes[Math.floor(Math.random() * magicQuotes.length)];
-  // res.status(200).json({
-  //   answer: quotes,
+  let quotes = magicQuotes[Math.floor(Math.random() * magicQuotes.length)];
+  res.status(200).json({ message: quotes });
 });
-
 module.exports = magicRoute;
